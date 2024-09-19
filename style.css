@@ -1,1 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background-image: linear-gradient(to bottom, #100F0F, #2B2626, #100F0F);
+}
+
+
+.image_pizza {
+    text-align: center;
+}
+
+.pizza-name {
+    text-align: center;
+    font-size: 35px;
+    background-image: linear-gradient(#E3535D, #2AA5A0);/* Градієнтний фон */
+        -webkit-background-clip: text;/* Обрізати фон по тексту */
+        -webkit-text-fill-color: transparent;/*робить текст прозорим, щоб градієнтний фон був видимий.*/
+}
