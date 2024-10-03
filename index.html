@@ -22,8 +22,7 @@ ap-icons.min.css">
   <header class="container fixed">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img class='logo' src='img/logo_white.png' height="50px"
-            alt='logo'></a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -47,16 +46,15 @@ ap-icons.min.css">
             <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
             <button class="btn btn-outline-secondary btn-search" type="submit">Знайти</button>
           </form>
-          <button data-quantity="0" class="btn-cart">
+          <button class="btn-cart" id="cartBtn">
             <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>icon-cart</title>
-              <path transform="translate(-3.62 -0.85)"
-                d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0">
-              </path>
+                xmlns="http://www.w3.org/2000/svg">
+                <path transform="translate(-3.62 -0.85)"
+                    d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0">
+                </path>
             </svg>
-            <span class="quantity"></span>
-          </button>
+            <span class="cart-counter">0</span>
+        </button>
         </div>
       </div>
     </nav>
@@ -65,7 +63,7 @@ ap-icons.min.css">
       <h2>PIZZALAND</h2>
     </div>
     <div class="line1">
-      <div class="line"></div div>
+      <div class="line"></div>
   </header>
 
 
@@ -115,86 +113,41 @@ ap-icons.min.css">
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <section class="container products py-5" id="products">
+      <h3 class="catalog">Каталог:</h3>
+      <div class="container-cards products-list">
 
-
-
-
-
-
-    <div class="row row-cols-1 row-cols-md-2 g-4 section-2">
-      <div class="col">
-        <div class="card">
-          <img src="img/nikas_example4.avif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <button type="button" class="cart-btn">
-              <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-                <path
-                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-              </svg>
-              BUY</button>
-          </div>
-        </div>
       </div>
-      <div class="col">
-        <div class="card">
-          <img src="img/nikas_example5.avif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <button type="button" class="cart-btn" data-product='${productData}'>
-              <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-                <path
-                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-              </svg>
-              BUY</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="img/nikas_example6.avif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content.</p>
-            <button type="button" class="cart-btn" data-product='${productData}'>
-              <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-                <path
-                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-              </svg>
-              BUY</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img src="img/nikas_example7.avif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-              content. This content is a little bit longer.</p>
-            <button type="button" class="cart-btn" data-product='${productData}'>
-              <svg class="bell" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
-                <path
-                  d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-              </svg>
-              BUY</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
+
   </main>
   <footer>
     <!-- Підвал сайту: про сайт, автор, контакти тощо -->
   </footer>
+ 
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-theme="light">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Виникли запитання?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-dark">Будь ласка, залиште номер телефону і ми зв'яжемося з Вами.</p>
+          <form action="" method="post">
+            <div class="mb-3">
+              <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                placeholder="Номер телефону" />
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn cart-btn">Надіслати</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Підключення JS-файлу Bootstrap-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
